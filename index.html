@@ -1308,7 +1308,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-left">
-        <div class="super"><span class="lit"></span> 90-Day Challenge · Jun 15 – Sep 12, 2026</div>
+        <div class="super"><span class="lit"></span> 90-Day Challenge · Jun 22 – Sep 19, 2026</div>
         <h1 class="hero-headline">Eat clean. Train hard.<br/><span class="accent">Track every bite.</span></h1>
         <p class="hero-sub" id="heroSub">Auto-updating meal plan with macros, groceries, and prices — drop in your trainer's weekly file and the rest is automatic.</p>
 
@@ -1411,7 +1411,7 @@ const WATER_KEY      = 'foodChallengeN_water_v1';
 const WATER_TARGET_ML= 4000; // 4 litres — daily goal
 const WATER_MAX_ML   = 6000; // 6 litres — hard ceiling (safety cap)
 const WATER_CUP_ML   = 250;  // 1 cup = 250 ml
-const CHALLENGE_START = '2026-06-15'; // Day 1 = Monday
+const CHALLENGE_START = '2026-06-22'; // Day 1 = Monday
 const CHALLENGE_DAYS  = 90;
 const TOTAL_WEEKS     = 13;
 
@@ -1477,7 +1477,7 @@ const SRC_DIET = 'D';
 const SRC_SERV = 'S';
 const SRC_REC  = 'R';
 
-/* ---------- WEEK 1 (Jun 15 – Jun 21) — N.'s Personalized Diet Week 0 ---------- */
+/* ---------- WEEK 1 (Jun 22 – Jun 28) — N.'s Personalized Diet Week 0 ---------- */
 function makeMonday(){
   return {
     preWorkout:  [
@@ -1663,7 +1663,7 @@ function makeSunday(){
   };
 }
 
-/* ---------- WEEK 2 (Jun 22 – Jun 28) — N.'s Week 1 from her tracker ---------- */
+/* ---------- WEEK 2 (Jun 29 – Jul 5) — N.'s Week 1 from her tracker ---------- */
 function makeMondayW3(){
   return {
     preWorkout:  [
@@ -1886,31 +1886,31 @@ function challengeStreak(weekStartIso){
 /* ---------- STATE ---------- */
 /* Build SEED_DATA NOW that all make*() and SALAD_NOTE constants are in scope */
 SEED_DATA = {
-  '2026-06-15': {
-    days: [
-      { date:'2026-06-15', day:'Monday',    items: makeMonday() },
-      { date:'2026-06-16', day:'Tuesday',   items: makeTuesday() },
-      { date:'2026-06-17', day:'Wednesday', items: makeWednesday() },
-      { date:'2026-06-18', day:'Thursday',  items: makeThursday() },
-      { date:'2026-06-19', day:'Friday',    items: makeFriday() },
-      { date:'2026-06-20', day:'Saturday',  items: makeSaturday() },
-      { date:'2026-06-21', day:'Sunday',    items: makeSunday() }
-    ],
-    uploadedAt: new Date().toISOString(),
-    sourceFile: 'Personalized Diet Week 0 (Jun 15)'
-  },
   '2026-06-22': {
     days: [
-      { date:'2026-06-22', day:'Monday',    items: makeMondayW3() },
-      { date:'2026-06-23', day:'Tuesday',   items: makeTuesdayW3() },
-      { date:'2026-06-24', day:'Wednesday', items: makeWednesdayW3() },
-      { date:'2026-06-25', day:'Thursday',  items: makeThursdayW3() },
-      { date:'2026-06-26', day:'Friday',    items: makeFridayW3() },
-      { date:'2026-06-27', day:'Saturday',  items: makeSaturdayW3() },
-      { date:'2026-06-28', day:'Sunday',    items: makeSundayW3() }
+      { date:'2026-06-22', day:'Monday',    items: makeMonday() },
+      { date:'2026-06-23', day:'Tuesday',   items: makeTuesday() },
+      { date:'2026-06-24', day:'Wednesday', items: makeWednesday() },
+      { date:'2026-06-25', day:'Thursday',  items: makeThursday() },
+      { date:'2026-06-26', day:'Friday',    items: makeFriday() },
+      { date:'2026-06-27', day:'Saturday',  items: makeSaturday() },
+      { date:'2026-06-28', day:'Sunday',    items: makeSunday() }
     ],
     uploadedAt: new Date().toISOString(),
-    sourceFile: 'Personalized Diet Week 1 (Jun 22)'
+    sourceFile: 'Personalized Diet Week 0 (Jun 22)'
+  },
+  '2026-06-29': {
+    days: [
+      { date:'2026-06-29', day:'Monday',    items: makeMondayW3() },
+      { date:'2026-06-30', day:'Tuesday',   items: makeTuesdayW3() },
+      { date:'2026-07-01', day:'Wednesday', items: makeWednesdayW3() },
+      { date:'2026-07-02', day:'Thursday',  items: makeThursdayW3() },
+      { date:'2026-07-03', day:'Friday',    items: makeFridayW3() },
+      { date:'2026-07-04', day:'Saturday',  items: makeSaturdayW3() },
+      { date:'2026-07-05', day:'Sunday',    items: makeSundayW3() }
+    ],
+    uploadedAt: new Date().toISOString(),
+    sourceFile: 'Personalized Diet Week 1 (Jun 29)'
   }
 };
 
